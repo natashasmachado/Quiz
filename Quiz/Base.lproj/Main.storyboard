@@ -254,10 +254,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="ysD-Rb-rlZ"/>
                     <connections>
-                        <outlet property="multiLabel1" destination="0eg-m3-IQu" id="xN6-AH-JjD"/>
-                        <outlet property="multiLabel2" destination="1rn-zP-HOC" id="FsV-4L-ABL"/>
-                        <outlet property="multiLabel3" destination="xjH-BK-CvC" id="KrF-kD-jhw"/>
-                        <outlet property="multiLabel4" destination="pGR-LJ-rTC" id="wgP-JK-1Ck"/>
+                        <outlet property="multiLabel1" destination="1el-DP-TMi" id="bZN-x8-uoO"/>
+                        <outlet property="multiLabel2" destination="ir1-rU-WIM" id="UxS-ht-Biu"/>
+                        <outlet property="multiLabel3" destination="zX3-mX-em7" id="zgF-Pq-Pbt"/>
+                        <outlet property="multiLabel4" destination="91N-vJ-hK2" id="yhO-ad-d2c"/>
                         <outlet property="multipleStackView" destination="cnY-Kk-LUV" id="gUS-f7-qsh"/>
                         <outlet property="questionLabel" destination="o1C-Qn-8va" id="Pcd-GG-wNc"/>
                         <outlet property="questionProgressView" destination="1KX-hu-dzt" id="yz0-F7-OtG"/>

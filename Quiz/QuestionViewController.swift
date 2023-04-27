@@ -9,20 +9,18 @@ import UIKit
 
 class QuestionViewController: UIViewController {
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    updateUI()
-  }
+  
   
   @IBOutlet var rangedStackView: UIStackView!
   @IBOutlet var rangedLabel1: UILabel!
   @IBOutlet var rangedLabel2: UILabel!
   
   @IBOutlet var multipleStackView: UIStackView!
-  @IBOutlet var multiLabel1: UIStackView!
-  @IBOutlet var multiLabel2: UIStackView!
-  @IBOutlet var multiLabel3: UIStackView!
-  @IBOutlet var multiLabel4: UIStackView!
+  @IBOutlet var multiLabel1: UILabel!
+  @IBOutlet var multiLabel2: UILabel!
+  @IBOutlet var multiLabel3: UILabel!
+  @IBOutlet var multiLabel4: UILabel!
+  
   
   @IBOutlet var singleStackView: UIStackView!
   @IBOutlet var singleButton1: UIButton!
@@ -74,6 +72,14 @@ class QuestionViewController: UIViewController {
   
   
   var questionIndex = 0
+  var answersChosen: [Answer] = []
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    updateUI()
+  }
+  
   
   func updateUI() {
     singleStackView.isHidden = true
@@ -92,15 +98,14 @@ class QuestionViewController: UIViewController {
     
     switch currentQuestion.type {
     case .single:
-      updateSingleStack(using: currentAnswers)
+        updateSingleStack(using: currentAnswers)
     case .multiple:
-      updateMultipleStack(using: currentAnswers)
+        updateMultipleStack(using: currentAnswers)
     case .ranged:
-      updateRangedStack(using: currentAnswers)
+        updateRangedStack(using: currentAnswers)
     }
     
   }
-  
   
   func updateSingleStack(using answers: [Answer]) {
     singleStackView.isHidden = false
@@ -110,17 +115,20 @@ class QuestionViewController: UIViewController {
     singleButton4.setTitle(answers[3].text, for: .normal)
   }
   
-//
+
   func updateMultipleStack(using answers: [Answer]) {
     multipleStackView.isHidden = false
     multiLabel1.text = answers[0].text
+        multiLabel2.text = answers[1].text
+        multiLabel3.text = answers[2].text
+        multiLabel4.text = answers[3].text
   }
   
   
   func updateRangedStack(using answers: [Answer]) {
-    rangedStackView.isHidden = false
-    rangedLabel1.text = answers.first?.text
-    rangedLabel2.text = answers.last?.text
+      rangedStackView.isHidden = false
+      rangedLabel1.text = answers.first?.text
+      rangedLabel2.text = answers.last?.text
   }
   
 }
